@@ -1,0 +1,66 @@
+.page,
+.sheet {
+  /* Page sizes */
+  &.a3 {
+    --print-page-large-side: 420mm;
+    --print-page-small-side: 297mm;
+  }
+
+  &.a4 {
+    --print-page-large-side: 297mm;
+    --print-page-small-side: 210mm;
+  }
+
+  &.a5 {
+    --print-page-large-side: 210mm;
+    --print-page-small-side: 148mm;
+  }
+
+  &.a6 {
+    --print-page-large-side: 148mm;
+    --print-page-small-side: 105mm;
+  }
+
+  &.letter {
+    --print-page-large-side: 11in;
+    --print-page-small-side: 8.5in;
+  }
+
+  &[class~="3x4"] {
+    --print-page-small-side: 3in;
+    --print-page-large-side: 4in;
+  }
+
+  &[class~="poker"],
+  &[class~="2.5x3.5"],
+  &[class~="3.5x2.5"] {
+    --print-page-small-side: 2.5in;
+    --print-page-large-side: 3.5in;
+  }
+
+  &[class~="index"],
+  &[class~="3x5"],
+  &[class~="5x3"] {
+    --print-page-small-side: 3in;
+    --print-page-large-side: 5in;
+  }
+
+  &[class~="passport"],
+  &[class~="3.5x5"],
+  &[class~="5x3.5"] {
+    --print-page-small-side: 3.5in;
+    --print-page-large-side: 5in;
+  }
+
+  &[class~="5x6"],
+  &[class~="6x5"] {
+    --print-page-small-side: 5in;
+    --print-page-large-side: 6in;
+  }
+
+  &[class~="5x7"],
+  &[class~="7x5"] {
+    --print-page-small-side: 5in;
+    --print-page-large-side: 7in;
+  }
+}

@@ -1,0 +1,98 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  @media screen {
+    background: #fcfcfc;
+  }
+}
+
+.page,
+.sheet {
+  box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  padding: 0.15in;
+  position: relative;
+
+  @media screen {
+    background-color: #ffffff;
+    border: solid 1px #00000030;
+
+    &:not(.sheet *) {
+      margin: 32px auto;
+      box-shadow: 5px 5px 20px #00000030;
+    }
+  }
+
+  @media print {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  /* Orientation */
+  &.portrait {
+    height: var(--print-page-large-side);
+    width: var(--print-page-small-side);
+
+    &.double {
+      height: calc(var(--print-page-small-side) * 2);
+      width: var(--print-page-large-side);
+    }
+  }
+
+  &.landscape {
+    height: var(--print-page-small-side);
+    width: var(--print-page-large-side);
+
+    &.double {
+      height: var(--print-page-large-side);
+      width: calc(var(--print-page-small-side) * 2);
+    }
+  }
+}
+
+.sheet {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: space-evenly;
+
+  /* Layout */
+  &.layout {
+    &.booklet {
+      justify-content: center;
+    }
+  }
+}
+
+.column,
+.columns {
+  hr {
+    break-after: column;
+    height: 0;
+    margin: 0;
+    visibility: hidden;
+  }
+
+  &[class*="two column"],
+  &[class*="two columns"] {
+    columns: 2;
+  }
+
+  &[class*="three column"],
+  &[class*="three columns"] {
+    columns: 3;
+  }
+
+  &[class*="four column"],
+  &[class*="four columns"] {
+    columns: 4;
+  }
+
+  &[class*="five column"],
+  &[class*="five columns"] {
+    columns: 5;
+  }
+}
