@@ -1,48 +1,58 @@
-# Card Print CSS
+# Web Print
 
-> Stylesheet for printing cards, labels, vignettes
+> Stylesheet for creating print-ready documents with HTML
 
-This CSS file is designed to print your own CSS formatted cards, vignettes, labels.
-You can add `.page` and `.card` elements to your document to create your print layout.
+**Web print** is a collection of CSS classes and default formatting to create print-ready documents using HTML and CSS.
 
-## Installation
+## Setup
 
 Import the stylesheet to your HTML document.
 
 ```html
-<link rel="stylesheet" href="path/to/card-print.css">
+<link rel="stylesheet" href="path/to/web-print.css">
 ```
 
 ## Usage
 
-Add your cards to pages and print through your browser's print dialog.
+Add pages to your document and print through your browser's print dialog. You can specify the orientation and size of the page with CSS classes. Class names are designed to form natural language-like classes. For available sizes see the [`styles/sizes.css`](styles/sizes.css) file.
 
 ```html
-<div class="page">
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
-  <div class="card"></div>
+<div class="portrait a4 page">
+  <!-- Document content goes here -->
 </div>
 ```
 
-You can configure your pages, cards and layout with the following CSS variables:
+> [!IMPORTANT]
+When printing through your browser's print dialog, make sure to set the page size to the same as you specified with the variables, set the margins to none, and to allow printing backgrounds.
 
-```css
-:root {
-  --card-width: 2.5in;
-  --card-height: 3.5in;
+If you want to print multiple pages per sheet, you can also wrap pages with a `.sheet` element. The orientation and size of the sheet can also be specified with CSS classes.
 
-  --page-width: 8.5in;
-  --page-height: 11in;
-  --page-margin: 0.25in;
-
-  --col-count: 2;
-  --row-count: 2;
-}
+```html
+<section class="portrait a4 sheet">
+  <acticle class="portrait 3x5 page"></article>
+  <acticle class="portrait 3x5 page"></article>
+  <acticle class="portrait 3x5 page"></article>
+  <acticle class="portrait 3x5 page"></article>
+</section>
 ```
 
-When printing, make sure to set the page size to the same as you specified with the variables, and to set the margins to none.
+You can also create multi-column layouts for your pages by specifying the number of columns up to five.
+
+```html
+<article class="portrait two column a4 page"></article>
+```
+
+> [!Tip]
+Both `.column` and `.columns` work for specifying column count, use whichever makes you class sound more natural.
+
+You can create new page sizes by setting the `--print-page-large-side` and `--print-page-small-side` CSS variables. Modifiers, such as `.portrait`, `.landscape` and `.double` will work automatically.
+
+```css
+.my-page-size {
+  --print-page-large-side: 8in;
+  --print-page-small-side: 4in;
+}
+```
 
 ## Contributing
 
