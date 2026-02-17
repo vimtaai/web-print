@@ -4,5 +4,13 @@
   "description": "Stylesheet for creating print-ready documents with HTML",
   "author": "Márton Visnovitz <vimtaai@pm.me>",
   "license": "MIT",
-  "repository": "github:vimtaai/web-print"
+  "repository": "github:vimtaai/web-print",
+  "scripts": {
+    "check": "biome check",
+    "check:ci": "biome ci",
+    "check:fix": "biome check --write"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.2"
+  }
 }
