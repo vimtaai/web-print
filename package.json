@@ -1,6 +1,6 @@
 {
   "name": "web-print",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Stylesheet for creating print-ready documents with HTML",
   "author": "Márton Visnovitz <vimtaai@pm.me>",
   "license": "MIT",

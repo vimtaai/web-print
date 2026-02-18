@@ -1,11 +1,11 @@
 # Changelog
 
-## Current changes
+## v3.0.0 (2026-02-18)
 
-- 💥 Change main CSS entry to `css/index.css`
+- 💥 **BREAKING CHANGE:** Change main CSS entry to `css/index.css`
 - 🏗️ Add CI/CD and publish pipeline
 - 🛠️ Add Biome formatter
 
-## v2.0.0 (2026-02-16)
+## v2.0.0 (2026-02-02)
 
 - 💥 Rename to `web-print`
