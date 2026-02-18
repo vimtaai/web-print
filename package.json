@@ -5,6 +5,10 @@
   "author": "Márton Visnovitz <vimtaai@pm.me>",
   "license": "MIT",
   "repository": "github:vimtaai/web-print",
+  "style": "css/index.css",
+  "files": [
+    "css/**/*.css"
+  ],
   "scripts": {
     "check": "biome check",
     "check:ci": "biome ci",

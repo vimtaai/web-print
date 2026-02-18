@@ -1,18 +1,18 @@
 # Web Print
 
-**Web print** is a collection of CSS classes and default formatting to create print-ready documents using HTML and CSS.
+Collection of CSS classes and default formatting to create print-ready documents using HTML and CSS.
 
 ## Setup
 
 Import the stylesheet to your HTML document.
 
 ```html
-<link rel="stylesheet" href="path/to/web-print/index.css">
+<link rel="stylesheet" href="path/to/web-print/css/index.css">
 ```
 
 ## Usage
 
-Add pages to your document and print through your browser's print dialog. You can specify the orientation and size of the page with CSS classes. Class names are designed to form natural language-like classes. For available sizes see the [`styles/sizes.css`](styles/sizes.css) file.
+Add pages to your document and print through your browser's print dialog. You can specify the orientation and size of the page with CSS classes. Class names are designed to form natural language-like classes. For available sizes see the [`css/modules/sizes.css`](css/modules/sizes.css) file.
 
 ```html
 <div class="portrait a4 page">
@@ -54,4 +54,4 @@ You can create new page sizes by setting the `--print-page-large-side` and `--pr
 
 ## Contributing
 
-All ideas, recommendations, bug reports, pull requests are welcome. :smile:
+All ideas, recommendations, bug reports, pull requests are welcome. 😊
