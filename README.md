@@ -1,5 +1,9 @@
 # Web Print
 
+[![License][license-badge]][license-link]
+[![Version][version-badge]][version-link]
+[![Build][build-badge]][build-link]
+
 Collection of CSS classes and default formatting to create print-ready documents using HTML and CSS.
 
 ## Setup
@@ -55,3 +59,10 @@ You can create new page sizes by setting the `--print-page-large-side` and `--pr
 ## Contributing
 
 All ideas, recommendations, bug reports, pull requests are welcome. 😊
+
+[license-badge]: https://img.shields.io/npm/l/web-print.svg
+[license-link]:https://github.com/vimtaai/web-print/blob/master/LICENSE.md
+[version-badge]: https://img.shields.io/npm/v/web-print.svg
+[version-link]: https://www.npmjs.com/package/web-print
+[build-badge]: https://github.com/vimtaai/web-print/actions/workflows/main.yaml/badge.svg
+[build-link]: https://github.com/vimtaai/web-print/actions/workflows/main.yaml
